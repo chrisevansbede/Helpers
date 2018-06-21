@@ -12,8 +12,10 @@ namespace Helpers
         private static void Main()
         {
             var retryExample = new RetryExample();
-            retryExample.Execute();
-            Console.WriteLine("Finished");
+            var result = retryExample.Execute();
+            Console.WriteLine(result.Success
+                ? $"Succeeded in {result.Tries} attempts."
+                : $"Failed, tried {result.Tries} times.");
             Console.ReadLine();
         }
     }

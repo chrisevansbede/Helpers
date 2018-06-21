@@ -9,10 +9,10 @@ namespace Helpers.Examples
 {
     public class RetryExample
     {
-        public void Execute()
+        public RetryResult Execute()
         {
             var i = 0;
-            RetryHelper.DoUntil(
+            return RetryHelper.DoUntil(
                 waitTime: 200,
                 action: () =>
                 {
