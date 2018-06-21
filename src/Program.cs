@@ -13,6 +13,7 @@ namespace Helpers
         {
             var retryExample = new RetryExample();
             retryExample.Execute();
+            Console.WriteLine("Finished");
             Console.ReadLine();
         }
     }
