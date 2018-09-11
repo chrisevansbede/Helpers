@@ -42,7 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Examples\MapperExample.cs" />
     <Compile Include="Examples\RetryExample.cs" />
+    <Compile Include="Helpers\MapperHelper.cs" />
     <Compile Include="Helpers\RetryHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
