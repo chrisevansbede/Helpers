@@ -7,15 +7,13 @@ using Helpers.Examples;
 
 namespace Helpers
 {
-    public class Program
+    public static class Program
     {
         private static void Main()
         {
-            var retryExample = new RetryExample();
-            var result = retryExample.Execute();
-            Console.WriteLine(result.Success
-                ? $"Succeeded in {result.Tries} attempts."
-                : $"Failed, tried {result.Tries} times.");
+            new RetryExample().Execute();
+            new MapperExample().Execute();
+            
             Console.ReadLine();
         }
     }

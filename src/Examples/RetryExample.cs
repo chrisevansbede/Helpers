@@ -9,10 +9,10 @@ namespace Helpers.Examples
 {
     public class RetryExample
     {
-        public RetryResult Execute()
+        public void Execute()
         {
             var i = 0;
-            return RetryHelper.DoUntil(
+            var retryResult = RetryHelper.DoUntil(
                 waitTime: 200,
                 action: () =>
                 {
@@ -26,6 +26,10 @@ namespace Helpers.Examples
 
                 // Response gets passed here to assert on
                 predicate: result => result > 5);
+            
+            Console.WriteLine(retryResult.Success
+                ? $"Succeeded in {retryResult.Tries} attempts."
+                : $"Failed, attempted {retryResult.Tries} times.");
         }
     }
 }
